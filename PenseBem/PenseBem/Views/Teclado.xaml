@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PenseBem.Views.Teclado">
+  <ContentView.Content>
+        <Frame BackgroundColor="DarkGray"
+               CornerRadius="5" 
+               Padding="5">
+
+            <Grid><!--Teclado-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <!--<RowDefinition Height="*" />-->
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0"><!--Letras/Funções/Operações Matematicas-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />                        
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Row="0" Grid.Column="0"><!--Letras-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Text="A" 
+                                TextColor="White" 
+                                FontAttributes="Bold" 
+                                FontSize="Medium" 
+                                BackgroundColor="Red" 
+                                CornerRadius="5" 
+                                BorderColor="White" 
+                                BorderWidth="2" 
+                                Grid.Row="0" 
+                                Grid.Column="0" />
+                        
+                        <Button Text="B" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Yellow" CornerRadius="5" BorderColor="White" BorderWidth="2" Grid.Row="0" Grid.Column="1" />
+                        <Button Text="C" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Blue" CornerRadius="5" BorderColor="White" BorderWidth="2" Grid.Row="0" Grid.Column="2" />
+                        <Button Text="D" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Green" CornerRadius="5" BorderColor="White" BorderWidth="2" Grid.Row="0" Grid.Column="3" />                        
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1"><!--Funções/Operações Matematicas-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Funções-->
+                        <Button Text="ENTER" TextColor="Blue" BackgroundColor="White" CornerRadius="5" Grid.Row="0" Grid.Column="0" />
+                        <Button Text="LIVRO" TextColor="Blue" BackgroundColor="White" CornerRadius="5" Grid.Row="0" Grid.Column="1" />
+                        <Button Text="DESL." TextColor="White" BackgroundColor="Red" CornerRadius="5" Grid.Row="0" Grid.Column="2" />
+                        <Button Text="LIGA" TextColor="White" BackgroundColor="Green" CornerRadius="5" Grid.Row="0" Grid.Column="3" />
+
+                        <!--Operações Matematicas-->
+                        <Button Text="-" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Blue" CornerRadius="5" Grid.Row="1" Grid.Column="1" />
+                        <Button Text="X" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Blue" CornerRadius="5" Grid.Row="1" Grid.Column="2" />
+                        <Button Text="+" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Blue" CornerRadius="5" Grid.Row="1" Grid.Column="0" />
+                        <Button Text="/" TextColor="White" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Blue" CornerRadius="5" Grid.Row="1" Grid.Column="3" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" RowSpacing="0"><!--Números/Notas Musicais/Jogos-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--Números-->
+                    <Button Text="1" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="0" />
+                    <Button Text="3" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="2" />
+                    <Button Text="4" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="3" />
+                    <Button Text="5" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="4" />
+                    <Button Text="6" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="5" />
+                    <Button Text="7" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="6" />
+                    <Button Text="2" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="1" />
+                    <Button Text="8" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="7" />
+                    <Button Text="9" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="8" />
+                    <Button Text="0" TextColor="Blue" FontSize="Small" FontAttributes="Bold" BackgroundColor="White" CornerRadius="5" Padding="0" Grid.Row="0" Grid.Column="9" />
+
+                    <!--Notas Musicais-->
+                    <Button Text="PAUSA" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="0" />
+                    <Button Text="DO" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="1" />
+                    <Button Text="RE" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="2" />
+                    <Button Text="MI" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="3" />
+                    <Button Text="FA" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="4" />
+                    <Button Text="SOL" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="5" />
+                    <Button Text="LA" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="6" />
+                    <Button Text="SI" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="7" />
+                    <Button Text="DO" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="8" />
+                    <Button Text="RE" TextColor="White" BackgroundColor="Red" CornerRadius="5" Padding="0" Grid.Row="1" Grid.Column="9" />
+
+                    <!--Notas Musicais-->
+                    <Button Text="ADIÇÃO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="0" />
+                    <Button Text="SUBTRAÇÃO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="1" />
+                    <Button Text="MULTIPLICAÇÃO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="2" />
+                    <Button Text="DIVISÃO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="3" />
+                    <Button Text="ARITMÉTICA" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="4" />
+                    <Button Text="OPERAÇÃO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="5" />
+                    <Button Text="SIGA-ME" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="6" />
+                    <Button Text="MEMÓRIA TONS" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="7" />
+                    <Button Text="NÚMERO DO MEIO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="8" />
+                    <Button Text="ADIVINHE O NÚMERO" TextColor="Green" FontSize="9" BackgroundColor="Yellow" CornerRadius="5" Padding="0" Margin="0,5,0,0" Grid.Row="2" Grid.Column="9" />
+                </Grid>                
+            </Grid>
+        </Frame>
+  </ContentView.Content>
+</ContentView>

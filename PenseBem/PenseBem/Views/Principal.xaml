@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Views="clr-namespace:PenseBem.Views"
+             x:Class="PenseBem.Views.Principal">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Views:Visor />
+            <Views:Teclado />
+        </StackLayout>
+
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Views:Visor Grid.Row="0" Grid.Column="0" />
+            <Views:Teclado Grid.Row="1" Grid.Column="0" />
+        </Grid>-->
+    </ContentPage.Content>
+</ContentPage>

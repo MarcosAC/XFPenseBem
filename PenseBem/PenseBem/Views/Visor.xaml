@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PenseBem.Views.Visor">
+
+    <ContentView.Content>
+        <Grid ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <!--<RowDefinition Height="*" />-->
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <!--<ColumnDefinition Width="*" />-->
+            </Grid.ColumnDefinitions>
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="0" />
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="1" />
+
+            <Label Text="-" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="2" />
+
+            <Label Text="*" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="3" />
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="4" />
+
+            <Label Text="=" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="5" />
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="6" />
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="7" />
+
+            <Label Text="8" 
+                   TextColor="#4A382E" 
+                   FontSize="60"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Black"
+                   Grid.Row="0" 
+                   Grid.Column="8" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>
