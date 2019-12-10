@@ -8,19 +8,5 @@
             <Views:Visor />
             <Views:Teclado />
         </StackLayout>
-
-        <!--<Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Views:Visor Grid.Row="0" Grid.Column="0" />
-            <Views:Teclado Grid.Row="1" Grid.Column="0" />
-        </Grid>-->
     </ContentPage.Content>
 </ContentPage>
