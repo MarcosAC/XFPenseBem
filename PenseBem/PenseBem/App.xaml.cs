@@ -15,7 +15,7 @@ namespace PenseBem
                 HotReloader.Current.Start(this);
             #endif
 
-            MainPage = new Principal();
+            MainPage = new PenseBemView();
         }
 
         protected override void OnStart()

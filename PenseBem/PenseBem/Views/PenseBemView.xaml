@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PenseBem.Views.PenseBemView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="styleLabel">
+                <Setter Property="TextColor" Value="#4A382E" />
+                <Setter Property="FontSize" Value="60" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleBaseButton">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleButtonLetras" BasedOn="{StaticResource styleBaseButton}">
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BorderWidth" Value="2" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleButtonOperacoes" BasedOn="{StaticResource styleBaseButton}">
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleButtonNumeros" BasedOn="{StaticResource styleBaseButton}">
+                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleButtonNotasMusicais" BasedOn="{StaticResource styleBaseButton}">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="styleButtonJogos" BasedOn="{StaticResource styleBaseButton}">
+                <Setter Property="TextColor" Value="Green" />
+                <Setter Property="FontSize" Value="9" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="BackgroundColor" Value="Yellow" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0,5,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid ColumnSpacing="0" Grid.Row="0" Grid.Column="0" BackgroundColor="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="45" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="0" />
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="1" />
+                    <Label Style="{StaticResource styleLabel}" Text="-" Grid.Row="0" Grid.Column="2" />
+                    <Label Style="{StaticResource styleLabel}" Text="*" TextColor="{Binding Asterisco}" Grid.Row="0" Grid.Column="3" />
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="4" />
+                    <Label Style="{StaticResource styleLabel}" Text="=" Grid.Row="0" Grid.Column="5" />
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="6" />
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="7" />
+                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="8" />
+                </Grid>
+
+                <Frame BackgroundColor="DarkGray"
+                   CornerRadius="5" 
+                   Padding="5" 
+                   Grid.Row="1"
+                   Grid.Column="0">
+
+                    <Grid>
+                        <!--Teclado-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <!--<RowDefinition Height="*" />-->
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <!--Letras/Funções/Operações Matematicas-->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <!--Letras-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Style="{StaticResource styleButtonLetras}"
+                                Text="A"                                 
+                                BackgroundColor="Red"
+                                Grid.Row="0" 
+                                Grid.Column="0" />
+
+                                <Button Style="{StaticResource styleButtonLetras}"
+                                Text="B"
+                                BackgroundColor="Yellow"
+                                Grid.Row="0"
+                                Grid.Column="1" />
+
+                                <Button Style="{StaticResource styleButtonLetras}" 
+                                Text="C" 
+                                BackgroundColor="Blue"
+                                Grid.Row="0"
+                                Grid.Column="2" />
+
+                                <Button Style="{StaticResource styleButtonLetras}"
+                                Text="D"
+                                BackgroundColor="Green"
+                                Grid.Row="0"
+                                Grid.Column="3" />
+                            </Grid>
+
+                            <Grid Grid.Row="0" Grid.Column="1">
+                                <!--Funções/Operações Matematicas-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--Funções-->
+                                <Button Text="ENTER"
+                                        TextColor="Blue"
+                                        BackgroundColor="White"
+                                        CornerRadius="5"
+                                        Grid.Row="0"
+                                        Grid.Column="0" />
+
+                                <Button Text="LIVRO"
+                                        TextColor="Blue"
+                                        BackgroundColor="White"
+                                        CornerRadius="5"
+                                        Grid.Row="0"
+                                        Grid.Column="1" />
+
+                                <Button Text="DESL."
+                                        TextColor="White"
+                                        BackgroundColor="Red"
+                                        CornerRadius="5"
+                                        Grid.Row="0"
+                                        Grid.Column="2" 
+                                        Command="{Binding BotaoDesligarCommand}" />
+
+                                <Button Text="LIGA"
+                                        TextColor="White"
+                                        BackgroundColor="Green"
+                                        CornerRadius="5"
+                                        Grid.Row="0"
+                                        Grid.Column="3" 
+                                        Command="{Binding BotaoLigarCommand}" />
+
+                                <!--Operações Matematicas-->
+                                <Button Style="{StaticResource styleButtonOperacoes}"
+                                Text="-"
+                                Grid.Row="1"
+                                Grid.Column="1" />
+
+                                <Button Style="{StaticResource styleButtonOperacoes}" 
+                                Text="X"
+                                Grid.Row="1"
+                                Grid.Column="2" />
+
+                                <Button Style="{StaticResource styleButtonOperacoes}"
+                                Text="+"
+                                Grid.Row="1"
+                                Grid.Column="0" />
+
+                                <Button Style="{StaticResource styleButtonOperacoes}"
+                                Text="/"
+                                Grid.Row="1"
+                                Grid.Column="3" />
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="1" RowSpacing="0">
+                            <!--Números/Notas Musicais/Jogos-->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--Números-->
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="0" Grid.Row="0" Grid.Column="0" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="1" Grid.Row="0" Grid.Column="1" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="2" Grid.Row="0" Grid.Column="2" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="3" Grid.Row="0" Grid.Column="3" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="4" Grid.Row="0" Grid.Column="4" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="5" Grid.Row="0" Grid.Column="5" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="6" Grid.Row="0" Grid.Column="6" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="7" Grid.Row="0" Grid.Column="7" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="8" Grid.Row="0" Grid.Column="8" />
+                            <Button Style="{StaticResource styleButtonNumeros}" Text="9" Grid.Row="0" Grid.Column="9" />
+
+                            <!--Notas Musicais-->
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="PAUSA" Grid.Row="1" Grid.Column="0" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="DO" Grid.Row="1" Grid.Column="1" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="RE" Grid.Row="1" Grid.Column="2" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="MI" Grid.Row="1" Grid.Column="3" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="FA" Grid.Row="1" Grid.Column="4" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="SOL" Grid.Row="1" Grid.Column="5" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="LA" Grid.Row="1" Grid.Column="6" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="SI" Grid.Row="1" Grid.Column="7" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="DO" Grid.Row="1" Grid.Column="8" />
+                            <Button Style="{StaticResource styleButtonNotasMusicais}" Text="RE" Grid.Row="1" Grid.Column="9" />
+
+                            <!--Jogos-->
+                            <Button Style="{StaticResource styleButtonJogos}" Text="ADIÇÃO" Grid.Row="2" Grid.Column="0" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="SUBTRAÇÃO" Grid.Row="2" Grid.Column="1" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="MULTIPLICAÇÃO" Grid.Row="2" Grid.Column="2" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="DIVISÃO" Grid.Row="2" Grid.Column="3" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="ARITMÉTICA" Grid.Row="2" Grid.Column="4" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="OPERAÇÃO" Grid.Row="2" Grid.Column="5" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="SIGA-ME" Grid.Row="2" Grid.Column="6" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="MEMÓRIA TONS" Grid.Row="2" Grid.Column="7" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="NÚMERO DO MEIO" Grid.Row="2" Grid.Column="8" />
+                            <Button Style="{StaticResource styleButtonJogos}" Text="ADIVINHE O NÚMERO" Grid.Row="2" Grid.Column="9" />
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

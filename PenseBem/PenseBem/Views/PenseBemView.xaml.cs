@@ -1,15 +1,16 @@
-﻿
+﻿using PenseBem.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace PenseBem.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Teclado : ContentView
+	public partial class PenseBemView : ContentPage
 	{
-		public Teclado ()
+		public PenseBemView ()
 		{
 			InitializeComponent ();
+            BindingContext = new PenseBemViewModel();
 		}
 	}
 }
