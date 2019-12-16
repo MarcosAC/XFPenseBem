@@ -5,7 +5,7 @@ namespace PenseBem.ViewModels
 {
     public class PenseBemViewModel : BaseViewModel
     {
-        private string _asterisco = "#4A382E";
+        private string _asterisco;
         public string Asterisco
         {
             get => _asterisco;
@@ -22,13 +22,13 @@ namespace PenseBem.ViewModels
 
         private void ExecuteBotaoDesligarCommand()
         {
-            _asterisco = "#4A382E";
+            _asterisco = string.Empty;
             OnPropertyChanged(nameof(Asterisco));
         }
 
         private void ExecuteBotaoLigarCommand()
         {
-            _asterisco = "Red";
+            _asterisco = "*";
             OnPropertyChanged(nameof(Asterisco));
         }
     }

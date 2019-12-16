@@ -6,7 +6,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label" x:Key="styleLabel">
-                <Setter Property="TextColor" Value="#4A382E" />
+                <Setter Property="TextColor" Value="Red" />
                 <Setter Property="FontSize" Value="60" />
             </Style>
 
@@ -63,32 +63,43 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Grid ColumnSpacing="0" Grid.Row="0" Grid.Column="0" BackgroundColor="Black">
+                <Grid ColumnSpacing="0" Grid.Row="0" Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="405" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="0" />
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="1" />
-                    <Label Style="{StaticResource styleLabel}" Text="-" Grid.Row="0" Grid.Column="2" />
-                    <Label Style="{StaticResource styleLabel}" Text="*" TextColor="{Binding Asterisco}" Grid.Row="0" Grid.Column="3" />
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="4" />
-                    <Label Style="{StaticResource styleLabel}" Text="=" Grid.Row="0" Grid.Column="5" />
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="6" />
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="7" />
-                    <Label Style="{StaticResource styleLabel}" Text="8" Grid.Row="0" Grid.Column="8" />
+                    <Grid Grid.Row="0" Grid.Column="0" ColumnSpacing="0" Padding="5,0,0,0" BackgroundColor="Black">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="45" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="0" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="1" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="2" />
+                        <Label Style="{StaticResource styleLabel}" Text="{Binding Asterisco}" Grid.Row="0" Grid.Column="3" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="4" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="5" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="6" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="7" />
+                        <Label Style="{StaticResource styleLabel}" Text="" Grid.Row="0" Grid.Column="8" />
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        
+                    </Grid>
                 </Grid>
 
                 <Frame BackgroundColor="DarkGray"
